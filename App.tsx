@@ -7,6 +7,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import HomeScreen from './src/components/HomeScreen/HomeScreen';
+import CameraScreen from './src/components/CameraScreen/CameraScreen';
 
 // Screen types
 type Screen = 'home' | 'camera';
@@ -41,6 +42,7 @@ function App(): React.JSX.Element {
           />
         );
       case 'camera':
+        return <CameraScreen onNavigateBack={handleNavigateToHome} />;
       default:
         return (
           <HomeScreen
